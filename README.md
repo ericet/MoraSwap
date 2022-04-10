@@ -6,6 +6,17 @@ MoraSwap是Solana EVM链NEON上的DEX，目前还在测试网测试：https://mo
 这个脚本会自动帮你领水，交易，提供流动，Farm，质押和解除质押，走一遍MoraSwap的所有功能
 
 ---
+Windows:
+* nodejs: https://nodejs.org/en/
+* git bash: https://git-scm.com/downloads
+
+OR
+
+Ubuntu:
+* sudo apt update
+* sudo apt install nodejs
+
+
 ## 设置
 * git clone https://github.com/ericet/MoraSwap.git
 * cd MoraSwap
