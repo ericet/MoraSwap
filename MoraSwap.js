@@ -121,7 +121,7 @@ function addLiquidity(wallet, amountIn, token, path) {
     })
 }
 
-function swapBnbToToken(wallet, amountIn, path) {
+function swapEthToToken(wallet, amountIn, path) {
     return new Promise(async (resolve) => {
         const contract = new ethers.Contract(config.ROUTER, pancakeAbi, provider);
         const deadline = Math.floor(Date.now() / 1000) + 60 * 20;
@@ -243,7 +243,7 @@ async function start(privateKey) {
     }
     if (balance >= 1000) {
         //Swap NEON for MORA
-        await swapBnbToToken(wallet, ""+balance*0.49, [config.WNEON, config.MORA]);
+        await swapEthToToken(wallet, ""+balance*0.49, [config.WNEON, config.MORA]);
         // //Add liquidity
         await addLiquidity(wallet, ""+balance*0.49, config.MORA, [config.WNEON, config.MORA]);
     }
